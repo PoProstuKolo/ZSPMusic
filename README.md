@@ -4,7 +4,7 @@ ZSPMusic to aplikacja, na pomysł stworzenia której wpadłem uświadamiając so
 
 # Jak sprawdzić aplikację?
 
-Aby sprawdzić działanie aplikacje kliknij [tutaj](https://kolodev.pl/projects/zspmusic/index.php) i zaloguj się (login & hasło: test) albo utwórz swoje własne konto i potestuj działanie aplikacji (maksymalnie 5 głosów na 24h)
+Aby sprawdzić działanie aplikacje kliknij [tutaj](https://kolodev.pl/projects/zspmusic/index.php) i zaloguj się (login & hasło: Test) albo utwórz swoje własne konto i potestuj działanie aplikacji (maksymalnie 5 głosów na 24h)
 
 # Technologie:
 
