@@ -1,0 +1,188 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+textarea {
+  resize: vertical;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+:root {
+  font-family: Inter, sans-serif;
+  font-feature-settings: "liga" 1, "calt" 1; /* fix for Chrome */
+}
+
+@supports (font-variation-settings: normal) {
+  :root {
+    font-family: InterVariable, sans-serif;
+  }
+}
+body {
+  font-family: Inter, sans-serif;
+}
+
+.particles {
+  height: 99vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0.25;
+  z-index: 0;
+}
+
+.header {
+  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0)), #124e74;
+  min-height: 100vh;
+}
+.header .navbar-toggler {
+  background-color: #fff;
+  margin: 1em;
+  padding: 0.5em 1em;
+}
+.header .nav-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .nav-link {
+  position: relative;
+  color: #fff;
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 200;
+  margin: 1em 1.25em;
+}
+.header .nav-link:not(.nav-link--login):not(.nav-link--logo)::before {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease-in-out;
+}
+.header .nav-link:hover:not(.nav-link--login):not(.nav-link--logo)::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+.header .nav-link--login {
+  background-color: #124e74;
+  border-radius: 25px;
+}
+.header__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 75vh;
+}
+.header__title {
+  position: relative;
+  color: #124e74;
+  text-shadow: 5px 5px 0px #031a29;
+  font-size: 8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 15px;
+}
+.header__title::before {
+  position: absolute;
+  content: "o projekcie";
+  font-size: 2.5rem;
+  color: #fff;
+  top: -15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  letter-spacing: 5px;
+}
+.header__title::after {
+  position: absolute;
+  content: "";
+  background-color: #124e74;
+  top: -20%;
+  left: 55%;
+  width: 25%;
+  height: 25px;
+}
+.header__hr {
+  background-color: #fff;
+  height: 2px;
+  width: 25%;
+}
+.header__signature {
+  color: #fff;
+  text-transform: uppercase;
+  padding: 2.5em;
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+.header__description {
+  color: #fff;
+  font-size: 1.8rem;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #ff0000;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,349 @@
+@charset "UTF-8";
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+textarea {
+  resize: vertical;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+:root {
+  font-family: Inter, sans-serif;
+  font-feature-settings: "liga" 1, "calt" 1; /* fix for Chrome */
+}
+
+@supports (font-variation-settings: normal) {
+  :root {
+    font-family: InterVariable, sans-serif;
+  }
+}
+body {
+  font-family: Inter, sans-serif;
+}
+
+.particles {
+  height: 99vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0.25;
+  z-index: 0;
+}
+
+.header {
+  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0)), #124e74;
+  min-height: 100vh;
+}
+.header .navbar-toggler {
+  background-color: #fff;
+  margin: 1em;
+  padding: 0.5em 1em;
+}
+.header .nav-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .nav-item .dropdown {
+  position: relative;
+}
+.header .nav-item .dropdown-menu {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.3rem;
+  background-color: #124e74;
+}
+.header .nav-item .dropdown-menu a {
+  padding: 1em 2em;
+  color: #fff;
+}
+.header .nav-item .dropdown-menu a:hover {
+  background-color: #031a29;
+}
+.header .nav-link {
+  position: relative;
+  color: #fff;
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 200;
+  margin: 1em 1.25em;
+}
+.header .nav-link:not(.nav-link--logged):not(.nav-link--logo)::before {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease-in-out;
+}
+.header .nav-link:hover:not(.nav-link--logged):not(.nav-link--logo)::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+.header .nav-link--logged {
+  background-color: #124e74;
+  border-radius: 25px;
+}
+.header .nav-link.show {
+  color: #fff;
+}
+.header__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 75vh;
+}
+.header__title {
+  position: relative;
+  color: #124e74;
+  text-shadow: 5px 5px 0px #031a29;
+  font-size: 8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 15px;
+}
+.header__title::before {
+  position: absolute;
+  content: "o projekcie";
+  font-size: 2.5rem;
+  color: #fff;
+  top: -15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  letter-spacing: 5px;
+}
+.header__title::after {
+  position: absolute;
+  content: "";
+  background-color: #124e74;
+  top: -20%;
+  left: 55%;
+  width: 25%;
+  height: 25px;
+}
+.header__hr {
+  background-color: #fff;
+  height: 2px;
+  width: 25%;
+}
+.header__signature {
+  color: #fff;
+  text-transform: uppercase;
+  padding: 2.5em;
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+.header__description {
+  color: #fff;
+  font-size: 1.8rem;
+}
+
+.main {
+  position: relative;
+  background-color: #151515;
+  padding: 5em 0em;
+}
+.main__divider {
+  background-color: #124c71;
+  width: 30%;
+  height: 55px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 10% 100%);
+          clip-path: polygon(0 0, 100% 0%, 100% 100%, 10% 100%);
+}
+.main__title {
+  color: #fff;
+  font-size: 3.2rem;
+  padding-top: 1em;
+  position: relative;
+  z-index: 0;
+  font-weight: 800;
+}
+.main__title::before {
+  content: "";
+  position: absolute;
+  top: 75%;
+  left: 36%;
+  width: 13%;
+  background-color: #124e74;
+  height: 20px;
+  z-index: -1;
+}
+.main__description {
+  padding-top: 1.5em;
+  color: #aaa;
+  font-size: 1.6rem;
+  text-align: center;
+}
+.main__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main__input {
+  border-radius: 25px;
+  outline: none;
+  border: 3px solid transparent;
+  padding: 0.5em 1em;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 1em;
+  transition: border 0.3s ease-in-out;
+}
+.main__input:focus {
+  border: 3px solid #3cb4ff;
+}
+.main__submit {
+  padding: 1em 2.5em;
+  font-size: 1.4rem;
+  border-radius: 25px;
+  outline: none;
+  border: 3px solid #3cb4ff;
+  color: #3cb4ff;
+  background-color: transparent;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+.main__submit:hover {
+  background-color: #3cb4ff;
+  color: #fff;
+}
+.main__list {
+  margin-top: 5em;
+  color: #aaa;
+  font-size: 1.6rem;
+}
+.main .vote__btn--plus {
+  color: #06bb23;
+}
+.main .vote__btn--minus {
+  color: #f00;
+}
+.main__ol {
+  color: #fff;
+  background-color: #124e74;
+  padding: 1em 2em;
+  border-radius: 25px;
+}
+.main__ol .ol__title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  text-align: center;
+}
+.main__ol li {
+  font-size: 2rem;
+  background-color: #3cb4ff;
+  border-radius: 15px;
+  padding: 1em 1.5em;
+  margin: 1em;
+}
+.main__ol li:first-of-type {
+  position: relative;
+}
+.main__ol li:first-of-type::before {
+  content: "👑";
+  position: absolute;
+  top: -45%;
+  left: -2.25%;
+  font-size: 4rem;
+  transform: rotate(-20deg);
+}
+.main__ol li:first-of-type::after {
+  content: "👑";
+  position: absolute;
+  top: -45%;
+  right: -2.25%;
+  font-size: 4rem;
+  transform: rotate(20deg);
+}
+.main__ol .vote_up {
+  color: #06bb23;
+  font-size: 2.5rem;
+  font-weight: bold;
+  background-color: #303030;
+  padding: 0.25em 0.5em;
+  border-radius: 50%;
+  margin: 0em 0.5em 0em 1em;
+}
+.main__ol .vote_down {
+  color: #f00;
+  font-size: 2.5rem;
+  font-weight: bold;
+  background-color: #303030;
+  padding: 0.25em 0.6em;
+  border-radius: 50%;
+  margin: 0em 1em 0em 0.5em;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #3cb4ff;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #084164;
+}/*# sourceMappingURL=logged.css.map */
